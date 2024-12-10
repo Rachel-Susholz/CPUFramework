@@ -23,7 +23,7 @@ namespace CPUFramework
             return dt;
         }
 
-        public static void DebugPrintDataTable(DataTable dt)
+        /*public static void DebugPrintDataTable(DataTable dt)
         {
             foreach(DataRow r in dt.Rows)
             {
@@ -33,5 +33,6 @@ namespace CPUFramework
                 } 
             }
         }
+        */
     }
 }
