@@ -24,10 +24,10 @@ namespace CPUFramework
             SetAllColumnsAllowNull(dt);
             return dt;
         }
-        public static void ExecuteSQL(string sqlstatrment)
+        public static DataTable ExecuteSQL(string sqlstatrment)
         {
             
-            GetDataTable(sqlstatrment);
+            return GetDataTable(sqlstatrment);
             
         }
         private static void SetAllColumnsAllowNull(DataTable dt)
