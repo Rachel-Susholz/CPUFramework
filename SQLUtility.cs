@@ -15,6 +15,7 @@ namespace CPUFramework
             SqlConnection conn = new();
             conn.ConnectionString = ConnectionString;
             conn.Open();
+
             SqlCommand cmd = new();
             cmd.Connection = conn;
             cmd.CommandText = sqlstatement;
@@ -25,7 +26,9 @@ namespace CPUFramework
         }
         public static void ExecuteSQL(string sqlstatrment)
         {
+            
             GetDataTable(sqlstatrment);
+            
         }
         private static void SetAllColumnsAllowNull(DataTable dt)
         {
@@ -35,7 +38,7 @@ namespace CPUFramework
             } 
         }
 
-        /*public static void DebugPrintDataTable(DataTable dt)
+        public static void DebugPrintDataTable(DataTable dt)
         {
             foreach(DataRow r in dt.Rows)
             {
@@ -45,6 +48,6 @@ namespace CPUFramework
                 } 
             }
         }
-        */
+        
     }
 }
