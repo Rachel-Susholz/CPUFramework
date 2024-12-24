@@ -9,19 +9,7 @@ namespace CPUFramework
     {
         public static string ConnectionString = "";
 
-        public static SqlCommand GetSqlCommand(string sprocname)
-        {
-            SqlCommand cmd;
-            using (SqlConnection conn = new(SQLUtility.ConnectionString))
-            {
-                cmd = new(sprocname, conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                conn.Open();
-                SqlCommandBuilder.DeriveParameters(cmd);
-            }
-            return cmd;
-        }
-
+        
         public static DataTable GetDataTable(string sqlstatement)
         {
             DataTable dt = new();
