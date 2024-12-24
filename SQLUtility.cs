@@ -22,6 +22,7 @@ namespace CPUFramework
             }
             return cmd;
         }
+
         public static DataTable GetDataTable(string sqlstatement)
         {
             DataTable dt = new();
